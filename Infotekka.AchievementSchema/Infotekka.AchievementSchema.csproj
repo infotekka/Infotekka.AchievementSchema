@@ -1,8 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFrameworks>netstandard2.1;net462;net6.0</TargetFrameworks>
     <Nullable>disable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>CLR2 Serialization Schema</Title>
+    <Authors>James Sheridan (james@infotekka.com)</Authors>
+    <Company>Infotekka, LLC for North Dakota</Company>
   </PropertyGroup>
 
   <ItemGroup>

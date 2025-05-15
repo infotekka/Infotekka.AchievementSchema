@@ -13,7 +13,7 @@ namespace Infotekka.AchievementSchema.Clr2
     public class Clr2Type
     {
         [JsonPropertyName("@context")]
-        public string[] Context { get; set; } = new[] {
+        public string[] Context { get; set; } = {
             "https://www.w3.org/ns/credentials/v2",
             "https://purl.imsglobal.org/spec/clr/v2p0/context-2.0.1.json",
             "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json",
@@ -22,7 +22,7 @@ namespace Infotekka.AchievementSchema.Clr2
         public string ID { get; set; } = "https://clr.edportal.nd.gov/credentials/{{CREDENTIAL_UUID}}";
 
         [JsonPropertyName("type")]
-        public string[] TypeName { get; set; } = new[] {
+        public string[] TypeName { get; set; } = {
             "VerifiableCredential",
             "ClrCredential"
         };
@@ -30,7 +30,7 @@ namespace Infotekka.AchievementSchema.Clr2
         public ProfileType Issuer { get; set; }
 
         //public DateTime ValidFrom { get; set; } = DateTime.UtcNow.Date;
-        public string ValidFrom { get; set; } = "{{VALID_FROM}}";
+        public DateTime ValidFrom { get; set; }
 
         public string Name { get; set; } = "New Credential";
 

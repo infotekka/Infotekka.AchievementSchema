@@ -1,11 +1,14 @@
-﻿namespace Infotekka.AchievementSchema.Clr2
+﻿using System.Text.Json.Serialization;
+
+namespace Infotekka.AchievementSchema.Clr2
 {
     /// <summary>
     /// https://www.imsglobal.org/spec/clr/v2p0#org.1edtech.clr.v2p0.address.class
     /// </summary>
     public class AddressType
     {
-        public string[] TypeName { get; set; } = new[] { "Address" };
+        [JsonPropertyName("type")]
+        public string[] TypeName { get; set; } = { "Address" };
 
         public string AddressCountry { get; set; }
 
@@ -18,7 +21,7 @@
 
         public string AddressLocality { get; set; }
 
-        public string SreetAddress { get; set; }
+        public string StreetAddress { get; set; }
 
         public string PostOfficeBoxNumber { get; set; }
 

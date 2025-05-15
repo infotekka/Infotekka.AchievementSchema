@@ -6,14 +6,14 @@
 
         public string Name { get; set; }
 
-        public string resultType { get; set; }
+        public string ResultType { get; set; }
 
-        public string valueMin { get; set; }
+        public string ValueMin { get; set; }
 
-        public string valueMax { get; set; }
+        public string ValueMax { get; set; }
 
-        public string requiredLevel { get; set; }
+        public string RequiredLevel { get; set; }
 
-        public string requiredValue { get; set; }
+        public string RequiredValue { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace Infotekka.AchievementSchema.Clr2
         public string ID { get; set; }
 
         [JsonPropertyName("type")]
-        public string[] TypeName { get; set; } = new[] { "ClrSubject" };
+        public string[] TypeName { get; set; } = { "ClrSubject" };
 
         public IdentifierType[] Identifier { get; set; }
 

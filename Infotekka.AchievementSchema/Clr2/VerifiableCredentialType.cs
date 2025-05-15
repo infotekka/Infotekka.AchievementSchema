@@ -9,12 +9,12 @@ namespace Infotekka.AchievementSchema.Clr2
     public class VerifiableCredentialType
     {
         [JsonPropertyName("@context")]
-        public string[] Context { get; set; } = new[] { "https://www.w3.org/ns/credentials/v2", "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json", "https://purl.imsglobal.org/spec/ob/v3p0/extensions.json" };
+        public string[] Context { get; set; } = { "https://www.w3.org/ns/credentials/v2", "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json", "https://purl.imsglobal.org/spec/ob/v3p0/extensions.json" };
 
         public string ID { get; set; }
 
         [JsonPropertyName("type")]
-        public string[] TypeName { get; set; } = new[] { "VerifiableCredential", "AchievementCredential" };
+        public string[] TypeName { get; set; } = { "VerifiableCredential", "AchievementCredential" };
 
         public ProfileType Issuer { get; set; }
 
@@ -27,5 +27,7 @@ namespace Infotekka.AchievementSchema.Clr2
         public CredentialSubjectType CredentialSubject { get; set; }
 
         public CredentialSchemaType CredentialSchema { get; set; }
+
+        public EvidenceType[] Evidence { get; set; }
     }
 }
