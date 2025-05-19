@@ -1,60 +1,142 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
 
 namespace Infotekka.AchievementSchema.Clr2
 {
     /// <summary>
-    /// OB3
+    /// https://www.imsglobal.org/spec/clr/v2p0#achievement
     /// </summary>
     public class AchievementType
     {
+        /// <summary>
+        /// Unique URI for the Achievement. (This gets turned in to a clickable link in the OCP wallet.)
+        /// </summary>
         public string ID { get; set; }
 
         [JsonPropertyName("@context")]
         public string[] Context { get; set; } = new string[] { "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json" };
 
+        /// <summary>
+        /// The type MUST include the IRI 'Achievement'.
+        /// </summary>
         [JsonPropertyName("type")]
-        public string[] TypeName { get; set; }
+        public string[] TypeName { get; set; } = { "Achievement" };
 
+        /// <summary>
+        /// The type of achievement. This is an extensible vocabulary.
+        /// </summary>
         [JsonPropertyName("achievementType")]
         public string AchievementTypeName { get; set; } = "Badge";
 
+        /// <summary>
+        /// An object describing which objectives or educational standards this achievement aligns to, if any.
+        /// </summary>
         public AlignmentType[] Alignment { get; set; }
 
         public AssociationType[] Association { get; set; }
 
+        /// <summary>
+        /// A short description of the achievement.
+        /// </summary>
         public string Description { get; set; }
 
         public IdentifierType[] Identifier { get; set; }
 
+        /// <summary>
+        /// The name of the achievement.
+        /// </summary>
         public string Name { get; set; }
 
         public ProfileType Issuer { get; set; }
 
+        /// <summary>
+        /// The set of result descriptions that may be asserted as results with this achievement.
+        /// </summary>
         public ResultDescriptionType[] ResultDescription { get; set; }
 
-        public CreatorType Creator { get; set; }
+        public ProfileType Creator { get; set; }
 
+        /// <summary>
+        /// Criteria describing how to earn the achievement.
+        /// </summary>
         public CriteriaType Criteria { get; set; }
 
+        /// <summary>
+        /// An image representing the achievement.
+        /// </summary>
         public ImageType Image { get; set; }
 
-        public string CredentialType { get; set; } //Primary Tab
+        public string CredentialType { get; set; }
 
-        public string FieldOfStudy { get; set; } = "CIP Code Data pulled from Campus Solutions"; //Additional Details Tab
-        //pull from Campus Solutions here in C#
+        /// <summary>
+        /// Category, subject, area of study, discipline, or general branch of knowledge. Examples include Business, Education, Psychology, and Technology.
+        /// </summary>
+        public string FieldOfStudy { get; set; }
 
-        public string Specialization { get; set; } //Additional Details Tab
+        /// <summary>
+        /// Name given to the focus, concentration, or specific area of study defined in the achievement. Examples include 'Entrepreneurship', 'Technical Communication', and 'Finance'.
+        /// </summary>
+        public string Specialization { get; set; }
 
-        public decimal CreditsAvailable { get; set; } //Additional Details Tab
+        /// <summary>
+        /// Credit hours associated with this entity, or credit hours possible. For example 3.0.	
+        /// </summary>
+        public decimal CreditsAvailable { get; set; }
 
-        public string HumanCode { get; set; } //Additional Details Tab
+        /// <summary>
+        /// The code, generally human readable, associated with an achievement.
+        /// </summary>
+        public string HumanCode { get; set; }
 
-        public string InLanguage { get; set; } //Additional Details Tab
+        /// <summary>
+        /// The language of the achievement.
+        /// </summary>
+        public string InLanguage { get; set; }
 
-        public string Version { get; set; } //Additional Details Tab
+        /// <summary>
+        /// The version property allows issuers to set a version string for an Achievement. This is particularly useful when replacing a previous version with an update.
+        /// </summary>
+        public string Version { get; set; }
 
-        public string Level { get; set; } // what this does?
+        public string Level { get; set; }
 
+        /// <summary>
+        /// One or more short, human-friendly, searchable, keywords that describe the type of achievement.
+        /// </summary>
         public string[] Tag { get; set; }
+
+        public static class AchievementTypes
+        {
+            public const string Achievement = "Achievement";
+            public const string ApprenticeshipCertificate = "ApprenticeshipCertificate";
+            public const string Assignment = "Assignment";
+            public const string AssociateDegree = "AssociateDegree";
+            public const string Award = "Award";
+            public const string Badge = "Badge";
+            public const string BachelorDegree = "BachelorDegree";
+            public const string Certificate = "Certificate";
+            public const string CertificateOfCompletion = "CertificateOfCompletion";
+            public const string Certification = "Certification";
+            public const string CommunityService = "CommunityService";
+            public const string Competency = "Competency";
+            public const string Course = "Course";
+            public const string CoCurricular = "CoCurricular";
+            public const string Degree = "Degree";
+            public const string Diploma = "Diploma";
+            public const string DoctoralDegree = "DoctoralDegree";
+            public const string Fieldwork = "Fieldwork";
+            public const string GeneralEducationDevelopment = "GeneralEducationDevelopment";
+            public const string JourneymanCertificate = "JourneymanCertificate";
+            public const string LearningProgram = "LearningProgram";
+            public const string License = "License";
+            public const string Membership = "Membership";
+            public const string ProfessionalDoctorate = "ProfessionalDoctorate";
+            public const string QualityAssuranceCredential = "QualityAssuranceCredential";
+            public const string MasterCertificate = "MasterCertificate";
+            public const string MasterDegree = "MasterDegree";
+            public const string MicroCredential = "MicroCredential";
+            public const string ResearchDoctorate = "ResearchDoctorate";
+            public const string SecondarySchoolDiploma = "SecondarySchoolDiploma";
+        }
     }
 }

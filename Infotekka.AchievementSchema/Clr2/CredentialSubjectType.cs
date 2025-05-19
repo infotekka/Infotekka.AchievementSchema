@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using Infotekka.AchievementSchema.Clr2.Data;
+using System.Text.Json.Serialization;
 
 namespace Infotekka.AchievementSchema.Clr2
 {
@@ -14,7 +15,7 @@ namespace Infotekka.AchievementSchema.Clr2
 
         public IdentifierType[] Identifier { get; set; }
 
-        public VerifiableCredentialType[] VerifiableCredential { get; set; }
+        public IVerifiableCredentialType[] VerifiableCredential { get; set; }
 
         public AchievementType Achievement { get; set; }
 

@@ -7,6 +7,7 @@
     <Title>CLR2 Serialization Schema</Title>
     <Authors>James Sheridan (james@infotekka.com)</Authors>
     <Company>Infotekka, LLC for North Dakota</Company>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

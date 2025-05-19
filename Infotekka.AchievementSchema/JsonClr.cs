@@ -35,7 +35,7 @@ namespace Infotekka.AchievementSchema
             clr2.CredentialSubject = new CredentialSubjectType() {
                 Identifier = cs.Identifier,
                 VerifiableCredential = new[] {
-                    new VerifiableCredentialType() {
+                    new AchievementCredentialType() {
                         Issuer = clr2.Issuer,
                         CredentialSubject = cs,
                         ID = Guid.NewGuid().ToString()
