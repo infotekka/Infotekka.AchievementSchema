@@ -15,7 +15,7 @@ namespace Infotekka.AchievementSchema.Clr2.Data
 
         DateTime ValidFrom { get; set; }
 
-        DateTime ValidUntil { get; set; }
+        DateTime? ValidUntil { get; set; }
 
         ISubjectType CredentialSubject { get; set; }
 

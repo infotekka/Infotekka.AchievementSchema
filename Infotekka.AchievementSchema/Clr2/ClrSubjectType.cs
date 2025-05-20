@@ -33,7 +33,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// <summary>
         /// A set of AchievementCredentials, OpenBadgeCredentials, and other VerifiableCredentials the learner has been awarded. The credential issuers may not be the same entity as the ClrCredential issuer, but the ClrCredential's credential subject is guaranteed to be the same person as the credential subject of each included credential, even if they use different identifiers.
         /// </summary>
-        public IVerifiableCredentialType[] VerifiableCredential { get; set; }
+        public AchievementCredentialType[] VerifiableCredential { get; set; }
 
         /// <summary>
         /// Associations describe the semantic relationship between source and target achievements and their assertions.

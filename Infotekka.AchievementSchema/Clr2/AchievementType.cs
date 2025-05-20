@@ -23,10 +23,11 @@ namespace Infotekka.AchievementSchema.Clr2
         public string[] TypeName { get; set; } = { "Achievement" };
 
         /// <summary>
-        /// The type of achievement. This is an extensible vocabulary.
+        /// The type of achievement. This is an extensible vocabulary.<br />
+        /// <see cref="AchievementTypes"/>
         /// </summary>
         [JsonPropertyName("achievementType")]
-        public string AchievementTypeName { get; set; } = "Badge";
+        public string AchievementTypeName { get; set; }
 
         /// <summary>
         /// An object describing which objectives or educational standards this achievement aligns to, if any.
@@ -81,7 +82,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// <summary>
         /// Credit hours associated with this entity, or credit hours possible. For example 3.0.	
         /// </summary>
-        public decimal CreditsAvailable { get; set; }
+        public decimal? CreditsAvailable { get; set; }
 
         /// <summary>
         /// The code, generally human readable, associated with an achievement.

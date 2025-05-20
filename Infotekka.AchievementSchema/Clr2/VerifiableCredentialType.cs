@@ -39,7 +39,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// <summary>
         /// If the credential has some notion of validity period, this indicates a timestamp when a credential should no longer be considered valid. After this time, the credential should be considered invalid.
         /// </summary>
-        public DateTime ValidUntil { get; set; }
+        public DateTime? ValidUntil { get; set; }
 
         /// <summary>
         /// The subject of the credential.

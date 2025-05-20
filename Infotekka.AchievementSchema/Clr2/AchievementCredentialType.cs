@@ -44,7 +44,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// <summary>
         /// Timestamp of when the credential was awarded. validFrom is used to determine the most recent version of a Credential in conjunction with issuer and id. Consequently, the only way to update a Credental is to update the validFrom, losing the date when the Credential was originally awarded. awardedDate is meant to keep this original date.
         /// </summary>
-        public DateTime AwardedDate { get; set; }
+        public DateTime? AwardedDate { get; set; }
 
         /// <summary>
         /// The recipient of the achievement.
@@ -80,7 +80,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// <summary>
         /// If the credential has some notion of validity period, this indicates a timestamp when a credential should no longer be considered valid. After this time, the credential should be considered invalid.
         /// </summary>
-        public DateTime ValidUntil { get; set; }
+        public DateTime? ValidUntil { get; set; }
 
         /// <summary>
         /// If present, one or more embedded cryptographic proofs that can be used to detect tampering and verify the authorship of the credential.
