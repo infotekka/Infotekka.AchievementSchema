@@ -23,12 +23,12 @@ namespace Infotekka.AchievementSchema.Clr2
         /// <summary>
         /// The datetime the activity ended.
         /// </summary>
-        public DateTime ActivityEndDate { get; set; }
+        public DateTime? ActivityEndDate { get; set; }
 
         /// <summary>
         /// The datetime the activity started.
         /// </summary>
-        public DateTime ActivityStartDate { get; set; }
+        public DateTime? ActivityStartDate { get; set; }
 
         /// <summary>
         /// The number of credits earned, generally in semester or quarter credit hours. This field correlates with the Achievement creditsAvailable field.

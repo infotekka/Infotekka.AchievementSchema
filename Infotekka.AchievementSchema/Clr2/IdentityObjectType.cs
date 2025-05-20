@@ -27,7 +27,8 @@ namespace Infotekka.AchievementSchema.Clr2
         public string IdentityHash { get; set; } = "{{EMAIL}}";
 
         /// <summary>
-        /// The identity type.
+        /// The identity type.<br />
+        /// <see cref="IdentifierTypes"></see>
         /// </summary>
         [JsonPropertyName("identityType")]
         public string IdentityType { get; set; } = "emailAddress"; //https://www.imsglobal.org/spec/clr/v2p0#identifiertypeenum-enumeration
@@ -37,5 +38,28 @@ namespace Infotekka.AchievementSchema.Clr2
         /// </summary>
         [JsonPropertyName("salt")]
         public string Salt { get; set; }
+
+        public static class IdentifierTypes
+        {
+            public const string name = "name";
+            public const string sourcedId = "sourcedId";
+            public const string systemId = "systemId";
+            public const string productId = "productId";
+            public const string userName = "userName";
+            public const string accountId = "accountId";
+            public const string emailAddress = "emailAddress";
+            public const string nationalIdentityNumber = "nationalIdentityNumber";
+            public const string isbn = "isbn";
+            public const string issn = "issn";
+            public const string lisSourcedId = "lisSourcedId";
+            public const string oneRosterSourcedId = "oneRosterSourcedId";
+            public const string sisSourcedId = "sisSourcedId";
+            public const string ltiContextId = "ltiContextId";
+            public const string ltiDeploymentId = "ltiDeploymentId";
+            public const string ltiToolId = "ltiToolId";
+            public const string ltiPlatformId = "ltiPlatformId";
+            public const string ltiUserId = "ltiUserId";
+            public const string identifier = "identifier";
+        }
     }
 }
