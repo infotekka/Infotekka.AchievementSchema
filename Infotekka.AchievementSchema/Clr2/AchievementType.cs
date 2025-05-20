@@ -40,7 +40,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// </summary>
         public string Description { get; set; }
 
-        public IdentifierType[] Identifier { get; set; }
+        public IdentityObjectType[] Identifier { get; set; }
 
         /// <summary>
         /// The name of the achievement.

@@ -34,14 +34,14 @@ namespace Infotekka.AchievementSchema.Clr2
 
         public string Name { get; set; } = "New Credential";
 
-        public CredentialSubjectType CredentialSubject { get; set; }
+        public ClrSubjectType CredentialSubject { get; set; }
 
         public CredentialSchemaType[] CredentialSchema { get; set; }
 
         public Clr2Type() {
             this.Issuer = new ProfileType();
-            this.CredentialSubject = new CredentialSubjectType() {
-                Identifier = new IdentifierType[] { new IdentifierType() },
+            this.CredentialSubject = new ClrSubjectType() {
+                Identifier = new IdentityObjectType[] { new IdentityObjectType() },
                 Achievement = new AchievementType()
             };
         }

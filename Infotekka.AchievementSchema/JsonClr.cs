@@ -30,28 +30,30 @@ namespace Infotekka.AchievementSchema
         }
 
         public static Clr2Type ConvertToVerifiableCredential(string JsonText) {
-            var clr2 = DeserializeCredential<Clr2Type>(JsonText);
-            var cs = clr2.CredentialSubject;
-            clr2.CredentialSubject = new CredentialSubjectType() {
-                Identifier = cs.Identifier,
-                VerifiableCredential = new[] {
-                    new AchievementCredentialType() {
-                        Issuer = clr2.Issuer,
-                        CredentialSubject = cs,
-                        ID = Guid.NewGuid().ToString()
-                    }
-                }
-            };
+            //var clr2 = DeserializeCredential<Clr2Type>(JsonText);
+            //var cs = clr2.CredentialSubject;
+            //clr2.CredentialSubject = new ClrSubjectType() {
+            //    Identifier = cs.Identifier,
+            //    VerifiableCredential = new[] {
+            //        new AchievementCredentialType() {
+            //            Issuer = clr2.Issuer,
+            //            CredentialSubject = cs,
+            //            ID = Guid.NewGuid().ToString()
+            //        }
+            //    }
+            //};
 
-            return clr2;
+            //return clr2;
+            throw new NotImplementedException();
         }
 
         public static Clr2Type ConvertToBadge(string JsonText) {
-            var clr2 = DeserializeCredential<Clr2Type>(JsonText);
-            var cs = clr2.CredentialSubject;
-            return new Clr2Type() {
-                CredentialSubject = clr2.CredentialSubject.VerifiableCredential[0].CredentialSubject
-            };
+            //var clr2 = DeserializeCredential<Clr2Type>(JsonText);
+            //var cs = clr2.CredentialSubject;
+            //return new Clr2Type() {
+            //    CredentialSubject = clr2.CredentialSubject.VerifiableCredential[0].CredentialSubject
+            //};
+            throw new NotImplementedException();
         }
         #endregion
     }

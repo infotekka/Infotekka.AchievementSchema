@@ -44,7 +44,8 @@ namespace Infotekka.AchievementSchema.Clr2
         /// <summary>
         /// The subject of the credential.
         /// </summary>
-        public CredentialSubjectType CredentialSubject { get; set; }
+        public ClrSubjectType CredentialSubject { get; set; }
+        ISubjectType IVerifiableCredentialType.CredentialSubject { get => CredentialSubject; set => CredentialSubject = value as ClrSubjectType; }
 
         /// <summary>
         /// If present, one or more embedded cryptographic proofs that can be used to detect tampering and verify the authorship of the credential.
