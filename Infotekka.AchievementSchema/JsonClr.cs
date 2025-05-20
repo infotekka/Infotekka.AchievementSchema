@@ -29,7 +29,7 @@ namespace Infotekka.AchievementSchema
             return JsonSerializer.Deserialize<T>(JsonText, options);
         }
 
-        public static Clr2Type ConvertToVerifiableCredential(string JsonText) {
+        public static VerifiableCredentialType ConvertToVerifiableCredential(string JsonText) {
             //var clr2 = DeserializeCredential<Clr2Type>(JsonText);
             //var cs = clr2.CredentialSubject;
             //clr2.CredentialSubject = new ClrSubjectType() {
@@ -47,7 +47,7 @@ namespace Infotekka.AchievementSchema
             throw new NotImplementedException();
         }
 
-        public static Clr2Type ConvertToBadge(string JsonText) {
+        public static AchievementCredentialType ConvertToBadge(string JsonText) {
             //var clr2 = DeserializeCredential<Clr2Type>(JsonText);
             //var cs = clr2.CredentialSubject;
             //return new Clr2Type() {

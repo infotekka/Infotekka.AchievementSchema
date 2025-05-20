@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace Infotekka.AchievementSchema.Clr2
 {
@@ -14,7 +11,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// The value of the type property MUST be an unordered set. One of the items MUST be the IRI 'Result'.
         /// </summary>
         [JsonPropertyName("type")]
-        public string TypeName { get; set; }
+        public string[] TypeName { get; set; } = { "Result" };
 
         /// <summary>
         /// If the result represents an achieved rubric criterion level (e.g. Mastered), the value is the id of the RubricCriterionLevel in linked ResultDescription.

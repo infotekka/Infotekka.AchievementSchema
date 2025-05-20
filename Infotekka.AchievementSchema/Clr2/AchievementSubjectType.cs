@@ -1,7 +1,5 @@
 ﻿using Infotekka.AchievementSchema.Clr2.Data;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.Json.Serialization;
 
 namespace Infotekka.AchievementSchema.Clr2

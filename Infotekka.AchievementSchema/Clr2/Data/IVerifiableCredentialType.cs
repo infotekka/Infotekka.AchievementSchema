@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text.Json.Serialization;
 
 namespace Infotekka.AchievementSchema.Clr2.Data
 {

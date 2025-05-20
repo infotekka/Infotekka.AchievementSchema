@@ -16,7 +16,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// The value of the type property MUST be an unordered set. One of the items MUST be the IRI 'ResultDescription'.
         /// </summary>
         [JsonPropertyName("type")]
-        public string TypeName { get; set; }
+        public string[] TypeName { get; set; } = { "ResultDescription" };
 
         /// <summary>
         /// Alignments between this result description and nodes in external frameworks.
@@ -44,7 +44,8 @@ namespace Infotekka.AchievementSchema.Clr2
         public string RequiredValue { get; set; }
 
         /// <summary>
-        /// The type of result this description represents. This is an extensible enumerated vocabulary.
+        /// The type of result this description represents. This is an extensible enumerated vocabulary.<br />
+        /// <see cref="ResultTypes"/>
         /// </summary>
         public string ResultType { get; set; }
 
@@ -63,19 +64,69 @@ namespace Infotekka.AchievementSchema.Clr2
         /// </summary>
         public string ValueMin { get; set; }
 
+        /// <summary>
+        /// The type of result. This is an extensible enumerated vocabulary. Extending the vocabulary makes use of a naming convention.
+        /// </summary>
         public static class ResultTypes
         {
+            /// <summary>
+            /// The result is a grade point average.
+            /// </summary>
             public const string GradePointAverage = "GradePointAverage";
-            public const string LetterGrade = "GradePointAverage";
+
+            /// <summary>
+            /// The result is a letter grade.
+            /// </summary>
+            public const string LetterGrade = "LetterGrade";
+
+            /// <summary>
+            /// The result is a percent score.
+            /// </summary>
             public const string Percent = "Percent";
+
+            /// <summary>
+            /// The result is a performance level.
+            /// </summary>
             public const string PerformanceLevel = "PerformanceLevel";
+
+            /// <summary>
+            /// The result is a predicted score.
+            /// </summary>
             public const string PredictedScore = "PredictedScore";
+
+            /// <summary>
+            /// The result is a raw score.
+            /// </summary>
             public const string RawScore = "RawScore";
+
+            /// <summary>
+            /// A generic result.
+            /// </summary>
             public const string Result = "Result";
+
+            /// <summary>
+            /// The result is from a rubric criterion.
+            /// </summary>
             public const string RubricCriterion = "RubricCriterion";
+
+            /// <summary>
+            /// The result is a rubric criterion level.
+            /// </summary>
             public const string RubricCriterionLevel = "RubricCriterionLevel";
+
+            /// <summary>
+            /// The result represents a rubric score with both a name and a numeric value.
+            /// </summary>
             public const string RubricScore = "RubricScore";
+
+            /// <summary>
+            /// The result is a scaled score.
+            /// </summary>
             public const string ScaledScore = "ScaledScore";
+
+            /// <summary>
+            /// The result conveys the status of the achievement.
+            /// </summary>
             public const string Status = "Status";
         }
     }
