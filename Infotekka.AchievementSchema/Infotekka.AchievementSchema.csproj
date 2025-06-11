@@ -8,7 +8,30 @@
     <Authors>James Sheridan (james@infotekka.com)</Authors>
     <Company>Infotekka, LLC for North Dakota</Company>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Description>Schema definition classes developed for the 1EdTech CLR2 Standard: https://www.imsglobal.org/spec/clr/v2p0.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>CLR2; OB3</PackageTags>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="License.txt" />
+    <None Remove="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="License.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </EmbeddedResource>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="9.0.4" />
