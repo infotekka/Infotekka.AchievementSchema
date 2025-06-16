@@ -21,12 +21,12 @@ namespace Infotekka.AchievementSchema.Clr2
         /// <summary>
         /// Alignments between this result description and nodes in external frameworks.
         /// </summary>
-        public string Alignment { get; set; }
+        public string[] Alignment { get; set; }
 
         /// <summary>
         /// An ordered list of allowed values. The values should be ordered from low to high as determined by the achievement creator.
         /// </summary>
-        public string AllowedValue { get; set; }
+        public string[] AllowedValue { get; set; }
 
         /// <summary>
         /// The name of the result.
@@ -52,7 +52,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// <summary>
         /// An ordered array of rubric criterion levels that may be asserted in the linked result. The levels should be ordered from low to high as determined by the achievement creator.
         /// </summary>
-        public string RubricCriterionLevel { get; set; }
+        public string[] RubricCriterionLevel { get; set; }
 
         /// <summary>
         /// The maximum possible value that may be asserted in a linked result.

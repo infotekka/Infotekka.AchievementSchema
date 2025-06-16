@@ -18,7 +18,7 @@ namespace Infotekka.AchievementSchema.Clr2
         /// The value of the type property MUST be an unordered set. One of the items MUST be the IRI 'AchievementSubject'.
         /// </summary>
         [JsonPropertyName("type")]
-        public string[] TypeName { get; set; }
+        public string[] TypeName { get; set; } = { "AchievementSubject" };
 
         /// <summary>
         /// The datetime the activity ended.
